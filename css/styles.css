@@ -1,0 +1,137 @@
+/****************************SELECTOR**************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/****************************CLASS SELECTOR**************************************/
+.main-container {
+  margin: 80px auto;
+  width: 80%;
+  display: grid;
+  grid-template-areas:
+    "top top top1 top2"
+    "middle1 middle2 middle2 top2";
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1.5fr);
+  grid-gap: 30px;
+}
+
+.template {
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 5px 5px 5px 5px hsl(245, 75%, 52%, 0.25);
+}
+
+.template-profile{
+  display: flex;
+  align-items: center;
+}
+
+.name-card-1,
+.name-card-2,
+.name-card-4{
+  color: hsl(0, 0%, 100%);
+}
+
+.name-card-3,
+.name-card-5{
+  color: hsl(219, 29%, 14%);
+}
+
+.top-title{
+  color: hsl(0, 0%, 81%);
+  margin-top: 5px;
+
+}
+
+.middle-description-1,
+.middle-description-2,
+.middle-description-3,
+.middle-description-4,
+.middle-description-5{
+  font-size: 23px;
+  margin: 10px auto 25px auto;
+
+}
+
+.middle-description-1,
+.middle-description-2,
+.middle-description-4{
+  color: hsl(0, 0%, 100%);
+}
+
+.bottom-description-1,
+.bottom-description-2,
+.bottom-description-4{
+  color: hsl(0, 0%, 81%);
+  line-height: 1.5;
+}
+
+.bottom-description-3,
+.bottom-description-5{
+  color: hsl(217, 19%, 35%);
+  line-height: 1.5;
+
+}
+
+.card-container-1 {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 100px;
+  grid-area: top;
+  background-color: hsl(263, 55%, 52%);
+}
+
+.card-container-2 {
+  grid-area: top1;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card-container-3 {
+  grid-area: middle1;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card-container-4 {
+  grid-area: middle2;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.card-container-5 {
+  grid-area: top2;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.attribution{
+  margin: 50px auto;
+}
+
+
+/****************************Media quaries**************************************/
+@media only screen and (max-width: 620px){
+  .main-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
+/****************************IMG CLASS SELECTOR**************************************/
+
+.img-profile{
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+}
